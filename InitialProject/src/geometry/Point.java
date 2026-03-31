@@ -6,6 +6,13 @@ public class Point {
 	private int y;
 	private boolean selected;
 	
+	public double distance(int x2, int y2) {
+		int dx = this.x - x2;
+		int dy = this.y - y2;
+		double d = Math.sqrt(dx * dx + dy * dy);
+		return d;
+	}
+	
 	public int getX() {
 		return x;
 	}
