@@ -5,6 +5,19 @@ public class Line {
 	private Point endPoint;
 	private boolean selected;
 	
+	public Line() {
+	}
+
+	public Line(Point startPoint, Point endPoint) {
+		this.startPoint = startPoint;
+		this.endPoint = endPoint;
+	}
+
+	public Line(Point startPoint, Point endPoint, boolean selected) {
+		this(startPoint, endPoint);
+		this.selected = selected;
+	}
+	
 	public double length() {
 		return startPoint.distance(endPoint.getX(), endPoint.getY());
 	}
