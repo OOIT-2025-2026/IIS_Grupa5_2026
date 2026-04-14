@@ -22,6 +22,10 @@ public class Line {
 		return startPoint.distance(endPoint.getX(), endPoint.getY());
 	}
 	
+	public String toString() {
+		return startPoint.toString() + "-->" + endPoint;
+	}
+	
 	public Point getStartPoint() {
 		return startPoint;
 	}

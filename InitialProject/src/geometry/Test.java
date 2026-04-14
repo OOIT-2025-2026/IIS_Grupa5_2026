@@ -83,6 +83,10 @@ public class Test {
 		System.out.println(p41.getX());
 		Point p42 = new Point(60,70);
 		Line l41 = new Line(p41,p42);
+		
+		System.out.println(p41); 
+		// toString se podrazumeva jer je p41 kao parametar System.out.println
+		System.out.println(p41.toString());
 	}
 
 }

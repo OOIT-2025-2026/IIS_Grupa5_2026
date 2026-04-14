@@ -34,6 +34,10 @@ public class Point {
 		return d;
 	}
 	
+	public String toString() {
+		return "("+ x + "," + y + ")"+", selected = "+ selected;
+	}
+	
 	public int getX() {
 		return x;
 	}
