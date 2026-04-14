@@ -87,6 +87,34 @@ public class Test {
 		System.out.println(p41); 
 		// toString se podrazumeva jer je p41 kao parametar System.out.println
 		System.out.println(p41.toString());
+		System.out.println(l41); 
+		
+		// EQUALS metoda
+		int c = 5; //int je primitivni tip
+		int g = 5; 
+		System.out.println(c == g); 
+		 
+		g = 7; 
+		System.out.println(c == g); 
+
+		String e = "abcd"; // String je klasa
+		String f = "abc"; // kreira se novi objekat 
+		System.out.println(e == f);
+
+
+		String h = "abc"; //referencira se postojeci objekat
+		System.out.println(f == h); 
+
+		String s1 = new String("Hello World");
+		String s2 = new String("Hello World"); // kreira se novi objekat 
+		System.out.println(s1==s2);
+		System.out.println(s1.equals(s2)); // poredjenje po vrednosti jer je redefinisana u klasi String
+		
+		Point p43 = new Point(40,50);
+		Point p44 = new Point(40,50);
+		System.out.println(p43==p44);
+		System.out.println(p43.equals(p44)); // pre redefinisanja vraca false, posle vraca false
+		System.out.println(p43.equals(l41));
 	}
 
 }

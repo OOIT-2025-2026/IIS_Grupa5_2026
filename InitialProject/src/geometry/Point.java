@@ -38,6 +38,19 @@ public class Point {
 		return "("+ x + "," + y + ")"+", selected = "+ selected;
 	}
 	
+	public boolean equals(Object obj) {
+		if (obj instanceof Point) {
+			Point secondPoint = ((Point)obj); // tacku podsecam da je tacka - downcast
+			
+			if(this.x == secondPoint.x && this.y == secondPoint.y && 
+					this.selected == secondPoint.selected) {
+				return true;
+			}
+		}
+		return false;
+	
+	}
+	
 	public int getX() {
 		return x;
 	}
