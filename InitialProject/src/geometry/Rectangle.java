@@ -1,6 +1,6 @@
 package geometry;
 
-public class Rectangle {
+public class Rectangle extends Object {
 	private Point upperLeftPoint;
 	private int height;
 	private int width;
@@ -42,6 +42,21 @@ public class Rectangle {
 				return true;
 		}
 		return false;
+	}
+	
+	public boolean contains(int x, int y) {
+		if(this.upperLeftPoint.getX() <= x /*levo*/ &&
+				this.upperLeftPoint.getY() <= y /*iznad*/ && 
+				x <= this.upperLeftPoint.getX()+width /*desno*/ &&
+				y <= this.upperLeftPoint.getY()+height /*ispod*/) {
+			return true;
+		}
+		
+		return false;
+	}
+	
+	public boolean contains(Point p) {
+		return this.contains(p.getX(), p.getY());
 	}
 	
 	public Point getUpperLeftPoint() {

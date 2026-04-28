@@ -29,7 +29,7 @@ public class Circle {
 	}
 	
 	public String toString() {
-		return "Center: " + center + ", radius = " + radius;
+		return "Center: " + center.toString() + ", radius = " + radius;
 	}
 	
 	public boolean equals(Object obj) {
@@ -41,6 +41,14 @@ public class Circle {
 				return false;
 		} else
 			return false;
+	}
+	
+	public boolean contains(int x, int y) {
+		return this.center.distance(x, y) <= this.radius;
+	}
+	
+	public boolean contains(Point p) {
+		return this.contains(p.getX(), p.getY());
 	}
 
 	public Point getCenter() {

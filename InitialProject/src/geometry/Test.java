@@ -115,6 +115,11 @@ public class Test {
 		System.out.println(p43==p44);
 		System.out.println(p43.equals(p44)); // pre redefinisanja vraca false, posle vraca false
 		System.out.println(p43.equals(l41));
+		
+		//Vezbe 5
+		Donut d1 = new Donut(p1, 30, 10);
+		System.out.println(d1.toString());
+		System.out.println("Povrsina krofne je: " + d1.area());
 	}
 
 }
