@@ -1,10 +1,11 @@
 package geometry;
 
-public class Rectangle extends Object {
+import java.awt.Graphics;
+
+public class Rectangle extends Shape {
 	private Point upperLeftPoint;
 	private int height;
 	private int width;
-	private boolean selected;
 	
 	public Rectangle() {
 
@@ -59,6 +60,12 @@ public class Rectangle extends Object {
 		return this.contains(p.getX(), p.getY());
 	}
 	
+	@Override
+	public void draw(Graphics g) {
+		g.drawRect(upperLeftPoint.getX(), 
+				upperLeftPoint.getY(), width, height);
+	}
+
 	public Point getUpperLeftPoint() {
 		return upperLeftPoint;
 	}

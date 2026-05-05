@@ -120,6 +120,13 @@ public class Test {
 		Donut d1 = new Donut(p1, 30, 10);
 		System.out.println(d1.toString());
 		System.out.println("Povrsina krofne je: " + d1.area());
+	
+		//Vezbe 6
+		//Shape s1 = new Shape();
+		Shape shape1 = new Circle(new Point(10,30), 10, true);
+		System.out.println(shape1.isSelected());
+		//System.out.println(shape1.getRadius());
+
 	}
 
 }
