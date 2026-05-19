@@ -126,6 +126,14 @@ public class Test {
 		Shape shape1 = new Circle(new Point(10,30), 10, true);
 		System.out.println(shape1.isSelected());
 		//System.out.println(shape1.getRadius());
+		
+		//Vezbe 8
+		Circle c5 = new Circle();
+		try {
+			c5.setRadius(-10);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
 
 	}
 
